@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  html,
+  body {
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Helvetica, Arial, sans-serif;
+  }
+} */
+
+@layer components {
+  .leftSideItem {
+    @apply w-min p-[11px];
+  }
+
+  .leftSide {
+    @apply cursor-pointer;
+  }
+
+  .leftSide:hover .leftSideItem {
+    @apply bg-[#E7E7E8]  rounded-3xl cursor-pointer;
+  }
+
+  .tweet-image {
+    @apply w-full h-auto rounded-2xl mt-3;
+  }
+}
