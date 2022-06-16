@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Icon from 'src/Icon';
 import NextImage from 'next/image';
 import { Image } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import fakeData from '../../../src/fakeDate.json';
 
 function Tweet() {
+  const router = useRouter();
+  useEffect(() => {
+    router.prefetch(`${fakeData.username}/status/${fakeData.status[0].id}`);
+  }, [router]);
+
   return (
-    <div className="cursor-pointer hover:bg-[#f7f7f7] transition-colors p-4">
+    <div
+      className="cursor-pointer hover:bg-[#f7f7f7] transition-colors p-4"
+      onClick={() =>
+        router.push(`${fakeData.username}/status/${fakeData.status[0].id}`)
+      }
+    >
       <div className="flex items-center space-x-3 ml-1">
         <Icon name="messageOne" color="#536471" size={16} />
         <div className="flex items-center space-x-1">
@@ -23,7 +35,8 @@ function Tweet() {
           src="/python.png"
           width="48px"
           height="48px"
-          objectFit="contain"
+          className="rounded-full"
+          objectFit="cover"
         />
         <div>
           <div className="flex justify-between items-center pr-3">

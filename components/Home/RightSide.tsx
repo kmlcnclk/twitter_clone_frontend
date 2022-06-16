@@ -14,10 +14,10 @@ const navList = [
   '© 2022 Twitter, Inc.',
 ];
 
-function RightSide() {
+function RightSide({ relativePeopleState }) {
   return (
-    <div className="px-8 h-full">
-      <div className="bg-white w-full h-[60px] fixed z-10">
+    <div className="px-8 h-min relative">
+      <div className="bg-white w-[350px] h-[60px] absolute right-0 -top-[70px]">
         <div className="flex items-center px-1 py-3 w-[350px] h-[45px] bg-[#f7f9f9] my-1 rounded-full">
           <Icon name="search" color="#536471" width="44px" height="18.75px" />
           <input
@@ -28,7 +28,39 @@ function RightSide() {
         </div>
       </div>
 
-      <div className="w-[370px] overflow-y-scroll h-full fixed pt-16 pb-8">
+      {relativePeopleState ? (
+        <div className="bg-white rounded-2xl border-[1px] border-[#eff3f4] w-[350px] mt-20 h-auto ">
+          <p className="text-2xl font-bold text-[#0F1419] px-4 py-3">
+            Relevant People
+          </p>
+          <div className="flex items-center justify-between transition-all hover:rounded-b-2xl hover:bg-[#EFF1F1] px-4 py-3 cursor-pointer">
+            <div className="flex items-center">
+              <NextImage
+                src="/python.png"
+                width="48px"
+                height="48px"
+                objectFit="cover"
+                className="rounded-full"
+              />
+              <div className="-space-y-1 ml-2">
+                <p className="text-[#0f1419] font-semibold hover:underline">
+                  Kamilcan Çelik
+                </p>
+                <p className="text-sm text-[#536471] font-semibold">
+                  @kmlcnclk
+                </p>
+              </div>
+            </div>
+            <div className="w-[77px] h-[32px] bg-[#0f1419] hover:bg-[#272c30] transition-all rounded-full flex items-center justify-center">
+              <p className="text-white text-sm">Follow</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="mt-20"></div>
+      )}
+
+      <div className="w-[370px] h-full my-4 ">
         <div className="w-[350px] h-auto bg-[#f7f9f9] pt-3 rounded-2xl ">
           <h3 className="text-[#0f1419] px-4 font-bold text-xl">
             Trends for you
@@ -53,7 +85,13 @@ function RightSide() {
           </h3>
           <div className="flex mt-4 items-center justify-between transition-all hover:bg-[#EFF1F1] px-4 py-2 cursor-pointer">
             <div className="flex items-center">
-              <NextImage src="/python.png" width="48px" height="48px" />
+              <NextImage
+                src="/python.png"
+                width="48px"
+                height="48px"
+                objectFit="cover"
+                className="rounded-full"
+              />
               <div className="-space-y-1 ml-2">
                 <p className="text-[#0f1419] font-semibold hover:underline">
                   Kamilcan Çelik
@@ -69,7 +107,13 @@ function RightSide() {
           </div>
           <div className="flex mt-4 items-center justify-between transition-all hover:bg-[#EFF1F1] px-4 py-2 cursor-pointer">
             <div className="flex items-center">
-              <NextImage src="/python.png" width="48px" height="48px" />
+              <NextImage
+                src="/python.png"
+                width="48px"
+                height="48px"
+                objectFit="cover"
+                className="rounded-full"
+              />
               <div className="-space-y-1 ml-2">
                 <p className="text-[#0f1419] font-semibold hover:underline">
                   Kamilcan Çelik
@@ -85,7 +129,12 @@ function RightSide() {
           </div>
           <div className="flex mt-4 items-center justify-between transition-all hover:bg-[#EFF1F1] px-4 py-2 cursor-pointer">
             <div className="flex items-center">
-              <NextImage src="/python.png" width="48px" height="48px" />
+              <NextImage
+                src="/python.png"
+                width="48px"
+                height="48px"
+                className="rounded-full"
+              />
               <div className="-space-y-1 ml-2">
                 <p className="text-[#0f1419] font-semibold hover:underline">
                   Kamilcan Çelik

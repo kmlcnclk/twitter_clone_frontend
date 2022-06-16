@@ -27,6 +27,8 @@ import {
   GoogleIcon,
   AppleIcon,
   SearchIcon,
+  LeftArrowIcon,
+  FillLikeIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -77,6 +79,8 @@ const Icon = ({
     google: GoogleIcon,
     apple: AppleIcon,
     search: SearchIcon,
+    leftArrow: LeftArrowIcon,
+    fillLike: FillLikeIcon,
   };
 
   const Component = icons[name];

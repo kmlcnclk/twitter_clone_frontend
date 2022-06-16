@@ -12,8 +12,8 @@ function Home() {
       <div className="w-[600px] h-auto">
         <MidSide />
       </div>
-      <div className="w-[382px]">
-        <RightSide />
+      <div className="w-[382px] h-auto">
+        <RightSide relativePeopleState={false} />
       </div>
     </div>
   );
