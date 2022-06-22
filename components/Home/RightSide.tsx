@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Icon from 'src/Icon';
 import RightSideMenuItem from './tools/rightSideMenuItem';
 import NextImage from 'next/image';
@@ -14,7 +14,13 @@ const navList = [
   '© 2022 Twitter, Inc.',
 ];
 
-function RightSide({ relativePeopleState }) {
+type RightSideProps = {
+  relativePeopleState: boolean;
+};
+
+const RightSide: FunctionComponent<RightSideProps> = ({
+  relativePeopleState,
+}: RightSideProps) => {
   return (
     <div className="px-8 h-min relative">
       <div className="bg-white w-[350px] h-[60px] absolute right-0 -top-[70px]">
@@ -165,6 +171,6 @@ function RightSide({ relativePeopleState }) {
       </div>
     </div>
   );
-}
+};
 
 export default RightSide;

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Icon from '../src/Icon';
+import { useRouter, NextRouter } from 'next/router';
+import Icon from 'src/Icon';
+import Layout from 'components/layout';
+import { NextPage } from 'next';
 
 const bottomTextList = [
   'About',
@@ -24,8 +26,8 @@ const bottomTextList = [
   '© 2022 Twitter, Inc.',
 ];
 
-export default function Home() {
-  const router = useRouter();
+const Index: NextPage = () => {
+  const router: NextRouter = useRouter();
 
   useEffect(() => {
     router.prefetch('/home');
@@ -36,7 +38,7 @@ export default function Home() {
   }, [router]);
 
   return (
-    <div>
+    <Layout>
       <div className="flex">
         <div className="bg-twitter-home bg-center bg-no-repeat w-[735.17px] h-[733px] flex justify-center items-center">
           <Icon name="twitter" color="#fff" width="735.17px" height="380px" />
@@ -112,6 +114,7 @@ export default function Home() {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
-}
+};
+export default Index;

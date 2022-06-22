@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Icon from 'src/Icon';
 
-function RightSideMenuItem() {
+const RightSideMenuItem: FunctionComponent = () => {
   return (
     <div className="hover:bg-[#EFF1F1] px-4 py-2 mt-4 cursor-pointer transition-all">
       <div className="flex items-center justify-between">
@@ -14,6 +14,6 @@ function RightSideMenuItem() {
       <p className="text-[#798690] text-xs font-semibold ">12.8K Tweets</p>
     </div>
   );
-}
+};
 
 export default RightSideMenuItem;

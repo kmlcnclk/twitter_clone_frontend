@@ -1,3 +1,4 @@
+import React, { FunctionComponent } from 'react';
 import {
   TwitterBirdIcon,
   HomeIcon,
@@ -41,7 +42,7 @@ type IconTypes = {
   className?: string;
 };
 
-const Icon = ({
+const Icon: FunctionComponent<IconTypes> = ({
   name,
   size,
   height,

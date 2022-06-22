@@ -1,4 +1,21 @@
-export const TwitterBirdIcon = ({ width, height, color, className }) => {
+import { SVGProps } from 'react';
+
+type IconTypes = {
+  name: string;
+  size?: number | string;
+  height?: number | string;
+  width?: number | string;
+  onClickFunc?: Function;
+  color?: string;
+  className?: string;
+};
+
+export const TwitterBirdIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width={width}
@@ -15,7 +32,11 @@ export const TwitterBirdIcon = ({ width, height, color, className }) => {
   );
 };
 
-export const HomeIcon = ({ size, color, className }) => {
+export const HomeIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       width={size}
@@ -32,7 +53,11 @@ export const HomeIcon = ({ size, color, className }) => {
   );
 };
 
-export const ExploreIcon = ({ size, color, className }) => {
+export const ExploreIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -49,7 +74,11 @@ export const ExploreIcon = ({ size, color, className }) => {
   );
 };
 
-export const NotificationIcon = ({ size, color, className }) => {
+export const NotificationIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -66,7 +95,11 @@ export const NotificationIcon = ({ size, color, className }) => {
   );
 };
 
-export const MessageIcon = ({ size, color, className }) => {
+export const MessageIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -83,7 +116,11 @@ export const MessageIcon = ({ size, color, className }) => {
   );
 };
 
-export const ProfileIcon = ({ size, color, className }) => {
+export const ProfileIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -100,7 +137,11 @@ export const ProfileIcon = ({ size, color, className }) => {
   );
 };
 
-export const MoreIcon = ({ size, color, className }) => {
+export const MoreIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -120,7 +161,11 @@ export const MoreIcon = ({ size, color, className }) => {
   );
 };
 
-export const BookmarkIcon = ({ size, color, className }) => {
+export const BookmarkIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -137,7 +182,11 @@ export const BookmarkIcon = ({ size, color, className }) => {
   );
 };
 
-export const ListIcon = ({ size, color, className }) => {
+export const ListIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -155,7 +204,11 @@ export const ListIcon = ({ size, color, className }) => {
   );
 };
 
-export const ThreePointNotCircleIcon = ({ size, color, className }) => {
+export const ThreePointNotCircleIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -174,7 +227,11 @@ export const ThreePointNotCircleIcon = ({ size, color, className }) => {
   );
 };
 
-export const TopTweetsIcon = ({ size, color, className }) => {
+export const TopTweetsIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -191,7 +248,11 @@ export const TopTweetsIcon = ({ size, color, className }) => {
   );
 };
 
-export const MediaIcon = ({ size, color, className }) => {
+export const MediaIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -209,7 +270,11 @@ export const MediaIcon = ({ size, color, className }) => {
   );
 };
 
-export const GifIcon = ({ size, color, className }) => {
+export const GifIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -227,7 +292,11 @@ export const GifIcon = ({ size, color, className }) => {
   );
 };
 
-export const PollIcon = ({ size, color, className }) => {
+export const PollIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -244,7 +313,11 @@ export const PollIcon = ({ size, color, className }) => {
   );
 };
 
-export const EmojiIcon = ({ size, color, className }) => {
+export const EmojiIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -264,7 +337,11 @@ export const EmojiIcon = ({ size, color, className }) => {
   );
 };
 
-export const ScheduleIcon = ({ size, color, className }) => {
+export const ScheduleIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -284,7 +361,11 @@ export const ScheduleIcon = ({ size, color, className }) => {
   );
 };
 
-export const LocationIcon = ({ size, color, className }) => {
+export const LocationIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -302,7 +383,11 @@ export const LocationIcon = ({ size, color, className }) => {
   );
 };
 
-export const MessageOneIcon = ({ size, color, className }) => {
+export const MessageOneIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -319,13 +404,18 @@ export const MessageOneIcon = ({ size, color, className }) => {
   );
 };
 
-export const ReplyIcon = ({ size, color, className }) => {
+export const ReplyIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
       width={size}
       height={size}
+      fill={color}
       className={className}
     >
       <g>
@@ -335,7 +425,11 @@ export const ReplyIcon = ({ size, color, className }) => {
   );
 };
 
-export const RetweetIcon = ({ size, color, className }) => {
+export const RetweetIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -352,7 +446,11 @@ export const RetweetIcon = ({ size, color, className }) => {
   );
 };
 
-export const LikeIcon = ({ size, color, className }) => {
+export const LikeIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -369,7 +467,11 @@ export const LikeIcon = ({ size, color, className }) => {
   );
 };
 
-export const ShareIcon = ({ size, color, className }) => {
+export const ShareIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -387,7 +489,11 @@ export const ShareIcon = ({ size, color, className }) => {
   );
 };
 
-export const BlueTickIcon = ({ size, color, className }) => {
+export const BlueTickIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -404,7 +510,11 @@ export const BlueTickIcon = ({ size, color, className }) => {
   );
 };
 
-export const ThreePointIcon = ({ size, color, className }) => {
+export const ThreePointIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -423,7 +533,12 @@ export const ThreePointIcon = ({ size, color, className }) => {
   );
 };
 
-export const TwitterIcon = ({ width, height, color, className }) => {
+export const TwitterIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -440,7 +555,11 @@ export const TwitterIcon = ({ width, height, color, className }) => {
   );
 };
 
-export const GoogleIcon = ({ size, color, className }) => {
+export const GoogleIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       version="1.1"
@@ -474,7 +593,11 @@ export const GoogleIcon = ({ size, color, className }) => {
   );
 };
 
-export const AppleIcon = ({ size, color, className }) => {
+export const AppleIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -491,7 +614,12 @@ export const AppleIcon = ({ size, color, className }) => {
   );
 };
 
-export const SearchIcon = ({ width, height, color, className }) => {
+export const SearchIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -508,7 +636,11 @@ export const SearchIcon = ({ width, height, color, className }) => {
   );
 };
 
-export const LeftArrowIcon = ({ size, color, className }) => {
+export const LeftArrowIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -525,7 +657,11 @@ export const LeftArrowIcon = ({ size, color, className }) => {
   );
 };
 
-export const FillLikeIcon = ({ size, color, className }) => {
+export const FillLikeIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
   return (
     <svg
       viewBox="0 0 24 24"

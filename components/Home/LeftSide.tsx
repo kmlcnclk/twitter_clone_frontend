@@ -1,8 +1,8 @@
-import React from 'react';
-import Icon from '../../src/Icon';
+import React, { FunctionComponent } from 'react';
+import Icon from 'src/Icon';
 import NextImage from 'next/image';
 
-function LeftSide() {
+const LeftSide: FunctionComponent = () => {
   return (
     <div className="m-1 min-h-screen fixed">
       <div className="flex min-h-screen flex-col justify-between">
@@ -121,6 +121,6 @@ function LeftSide() {
       </div>
     </div>
   );
-}
+};
 
 export default LeftSide;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ComponentState } from 'react';
 import Icon from 'src/Icon';
 import NextImage from 'next/image';
 import { NextRouter } from 'next/router';
@@ -6,9 +6,18 @@ import { Image } from '@chakra-ui/react';
 
 type Props = {
   router: NextRouter;
+  setTitle: ComponentState;
 };
 
-export default class UsernameStatusIdComponent extends Component<Props> {
+type States = {};
+
+class UsernameStatusIdComponent extends Component<Props, States> {
+  componentDidMount(): void {
+    this.props.setTitle(
+      ' Kamilcan ÇELİK on Twitter "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem."'
+    );
+  }
+
   render() {
     const { router } = this.props;
 
@@ -127,3 +136,4 @@ export default class UsernameStatusIdComponent extends Component<Props> {
     );
   }
 }
+export default UsernameStatusIdComponent;

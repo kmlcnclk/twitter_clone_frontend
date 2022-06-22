@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import Icon from 'src/Icon';
 import NextImage from 'next/image';
 import { Image } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import fakeData from '../../../src/fakeDate.json';
+import { useRouter, NextRouter } from 'next/router';
+import fakeData from 'src/fakeDate.json';
 
-function Tweet() {
-  const router = useRouter();
+const Tweet: FunctionComponent = () => {
+  const router: NextRouter = useRouter();
+
   useEffect(() => {
     router.prefetch(`${fakeData.username}/status/${fakeData.status[0].id}`);
   }, [router]);
@@ -93,6 +94,6 @@ function Tweet() {
       </div>
     </div>
   );
-}
+};
 
 export default Tweet;

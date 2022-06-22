@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import NextImage from 'next/image';
-import Icon from '../../src/Icon';
+import Icon from 'src/Icon';
 import Tweet from './tools/tweet';
 
-function MidSide() {
+const MidSide: FunctionComponent = () => {
   return (
     <div className="w-full h-full border-x-[1px] border-[#eff3f4]">
       <div>
@@ -57,6 +57,6 @@ function MidSide() {
       </div>
     </div>
   );
-}
+};
 
 export default MidSide;
