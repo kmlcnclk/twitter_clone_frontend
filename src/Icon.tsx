@@ -30,6 +30,21 @@ import {
   SearchIcon,
   LeftArrowIcon,
   FillLikeIcon,
+  TickIcon,
+  TopicsIcon,
+  MomentsIcon,
+  NewslettersIcon,
+  TwitterForProfessionalsIcon,
+  TwitterAdsIcon,
+  AnalyticsIcon,
+  SettingsAndPrivacyIcon,
+  HelpCenterIcon,
+  DisplayOutIcon,
+  DisplayInIcon,
+  KeyboardShortcutsIcon,
+  NewMessageIcon,
+  ExpandIcon,
+  CollapseIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -82,6 +97,21 @@ const Icon: FunctionComponent<IconTypes> = ({
     search: SearchIcon,
     leftArrow: LeftArrowIcon,
     fillLike: FillLikeIcon,
+    tick: TickIcon,
+    topics: TopicsIcon,
+    moments: MomentsIcon,
+    newsletters: NewslettersIcon,
+    twitterForProfessionals: TwitterForProfessionalsIcon,
+    twitterAds: TwitterAdsIcon,
+    analytics: AnalyticsIcon,
+    settingsAndPrivacy: SettingsAndPrivacyIcon,
+    helpCenter: HelpCenterIcon,
+    displayOut: DisplayOutIcon,
+    displayIn: DisplayInIcon,
+    keyboardShortcuts: KeyboardShortcutsIcon,
+    newMessage: NewMessageIcon,
+    expand: ExpandIcon,
+    collapse: CollapseIcon,
   };
 
   const Component = icons[name];

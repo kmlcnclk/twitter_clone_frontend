@@ -26,4 +26,60 @@
   .tweet-image {
     @apply w-full h-auto rounded-2xl mt-3;
   }
+
+  .tweet-icon {
+    @apply flex items-center space-x-3;
+  }
+
+  .tweet-icon-icon {
+    @apply fill-[#536471] transition-all;
+  }
+  .tweet-p {
+    @apply text-[#536471] text-sm transition-all;
+  }
+
+  .tweet-icon:nth-child(1):hover .tweet-icon-icon {
+    @apply fill-[#2F9CE5] transition-all;
+  }
+
+  .tweet-icon:nth-child(1):hover .tweet-p {
+    @apply text-[#2F9CE5] transition-all;
+  }
+
+  .tweet-icon:nth-child(2):hover .tweet-icon-icon {
+    @apply fill-[#00ba7c] transition-all;
+  }
+
+  .tweet-icon:nth-child(2):hover .tweet-p {
+    @apply text-[#00ba7c] transition-all;
+  }
+
+  .tweet-icon:nth-child(3):hover .tweet-icon-icon {
+    @apply fill-[#EB1779] transition-all;
+  }
+
+  .tweet-icon:nth-child(3):hover .tweet-p {
+    @apply text-[#EB1779] transition-all;
+  }
+  .tweet-icon:nth-child(4):hover .tweet-icon-icon {
+    @apply fill-[#2F9CE5] transition-all;
+  }
+  .message-box {
+    @apply bg-white shadow-[0_2px_10px_2px_rgba(0,0,0,0.3)] rounded-t-2xl bottom-14 translate-y-full z-40 w-[400px] h-[472px] right-7 transform fixed transition duration-500 ease-in-out;
+  }
+
+  .message-box-open {
+    @apply bottom-0 translate-y-14;
+  }
+
+  .messageItem {
+    @apply p-4 flex items-center space-x-2 hover:bg-[#eff3f4] cursor-pointer transition-all;
+  }
+
+  .messageMoreIcon {
+    @apply hidden;
+  }
+  .messageItem:hover .messageMoreIcon {
+    @apply block;
+  }
 }

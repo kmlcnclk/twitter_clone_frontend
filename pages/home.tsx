@@ -4,21 +4,25 @@ import MidSide from 'components/Home/MidSide';
 import React from 'react';
 import Layout from 'components/layout';
 import { NextPage } from 'next';
+import MessageBox from 'components/Messages/MessageBox';
 
 const Home: NextPage = () => {
   return (
     <Layout title="Home">
-      <div className="justify-center flex">
-        <div className="w-[270px]">
-          <LeftSide />
-        </div>
-        <div className="w-[600px] h-auto">
-          <MidSide />
-        </div>
-        <div className="w-[382px] h-auto">
-          <RightSide relativePeopleState={false} />
+      <div>
+        <div className="justify-center flex">
+          <div className="w-[270px]">
+            <LeftSide />
+          </div>
+          <div className="w-[600px] h-auto">
+            <MidSide />
+          </div>
+          <div className="w-[382px] h-auto">
+            <RightSide relativePeopleState={false} />
+          </div>
         </div>
       </div>
+      <MessageBox />
     </Layout>
   );
 };

@@ -19,7 +19,7 @@ const Tweet: FunctionComponent = () => {
         router.push(`${fakeData.username}/status/${fakeData.status[0].id}`)
       }
     >
-      <div className="flex items-center space-x-3 ml-1">
+      <div className="tweet-icon ml-1">
         <Icon name="messageOne" color="#536471" size={16} />
         <div className="flex items-center space-x-1">
           <p className="text-sm font-semibold text-[#536471] hover:underline">
@@ -68,26 +68,20 @@ const Tweet: FunctionComponent = () => {
             />
           </div>
           <div className="mt-3 flex justify-between items-center pr-20">
-            <div className="flex items-center space-x-3">
-              <div className=" transition-colors">
-                <Icon
-                  name="reply"
-                  size="18.75px"
-                  className="hover:fill-[#2F9CE5] fill-[#536471] hover:outline-1 transition-colors hover:outline-[#2F9CE5] hover:rounded-full"
-                />
-              </div>
-              <p className="text-[#536471] text-sm ">7</p>
+            <div className="tweet-icon">
+              <Icon name="reply" size="18.75px" className="tweet-icon-icon" />
+              <p className="tweet-p">7</p>
             </div>
-            <div className="flex items-center space-x-3">
-              <Icon name="retweet" size="18.75px" color="#536471" />
-              <p className="text-[#536471] text-sm ">1</p>
+            <div className="tweet-icon">
+              <Icon name="retweet" size="18.75px" className="tweet-icon-icon" />
+              <p className="tweet-p">1</p>
             </div>
-            <div className="flex items-center space-x-3">
-              <Icon name="like" size="18.75px" color="#536471" />
-              <p className="text-[#536471] text-sm ">78</p>
+            <div className="tweet-icon">
+              <Icon name="like" size="18.75px" className="tweet-icon-icon" />
+              <p className="tweet-p">78</p>
             </div>
-            <div className="flex items-center space-x-3">
-              <Icon name="share" size="18.75px" color="#536471" />
+            <div className="tweet-icon">
+              <Icon name="share" size="18.75px" className="tweet-icon-icon" />
             </div>
           </div>
         </div>
