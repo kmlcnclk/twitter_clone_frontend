@@ -6,6 +6,7 @@ import LeftSide from 'components/Home/LeftSide';
 import { NextRouter, useRouter } from 'next/router';
 import Layout from 'components/layout';
 import { NextPage } from 'next';
+import MessageBox from 'components/Messages/MessageBox';
 
 type IdProps = {
   id: number;
@@ -29,6 +30,7 @@ const Id: NextPage<IdProps> = ({}: IdProps) => {
           <RightSide relativePeopleState={true} />
         </div>
       </div>
+      <MessageBox />
     </Layout>
   );
 };
