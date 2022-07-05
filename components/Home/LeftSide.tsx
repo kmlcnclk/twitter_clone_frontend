@@ -25,7 +25,14 @@ const LeftSide: FunctionComponent = () => {
     router.prefetch(`/home`);
 
     if (router.pathname == '/home') dispatch(changeValue('home'));
-    if (router.pathname == '/[username]') dispatch(changeValue('profile'));
+    else if (router.pathname == '/explore') dispatch(changeValue('explore'));
+    else if (router.pathname == '/notifications') dispatch(changeValue('notifications'));
+    else if (router.pathname == '/messages') dispatch(changeValue('messages'));
+    else if (router.pathname == '/i/bookmarks') dispatch(changeValue('bookmarks'));
+    else if (router.pathname == '/[username]/lists') dispatch(changeValue('lists'));
+    else if (router.pathname == '/[username]') dispatch(changeValue('profile'));
+    else dispatch(changeValue(""))
+
   }, [router, user, dispatch]);
 
   return (
