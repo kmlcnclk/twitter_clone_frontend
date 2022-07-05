@@ -1,5 +1,12 @@
-{
-  "name": "Kamilcan Çelik",
-  "username": "kmlcnclk",
-  "status": [{ "id": "1" }]
-}
+[
+  {
+    "name": "Kamilcan Çelik",
+    "username": "kmlcnclk",
+    "status": [{ "id": "1" }]
+  },
+  {
+    "name": "Demir Çelik",
+    "username": "dmr",
+    "status": [{ "id": "2" }]
+  }
+]

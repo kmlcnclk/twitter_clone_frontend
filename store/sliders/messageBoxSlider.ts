@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { RootState } from '../store';
 
-interface CounterState {
+interface InitialState {
   value: boolean;
 }
 
-const initialState: CounterState = {
+const initialState: InitialState = {
   value: false,
 };
 

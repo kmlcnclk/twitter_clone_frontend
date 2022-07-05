@@ -1,10 +1,21 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState, useEffect } from 'react';
 import Icon from 'src/Icon';
 import NextImage from 'next/image';
+import { selectUser } from 'store/sliders/userSlider';
+import { useAppSelector } from 'store/hooks';
+import { useRouter } from 'next/router';
 
 const LeftSide: FunctionComponent = () => {
+  const router = useRouter();
+
+  const user = useAppSelector(selectUser);
+
   const [profilePopupState, setProfilePopupState] = useState<boolean>(false);
   const [moreState, setMoreState] = useState<boolean>(false);
+
+  useEffect(() => {
+    router.prefetch(`/${user.username}`);
+  }, [router, user]);
 
   return (
     <div
@@ -83,7 +94,10 @@ const LeftSide: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => router.push(`/${user.username}`)}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}

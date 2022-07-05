@@ -36,15 +36,20 @@ const Id: NextPage<IdProps> = ({}: IdProps) => {
 };
 
 export async function getStaticPaths() {
-  const paths = fakeData.status.map((s) => ({
-    params: { id: s.id, username: fakeData.username },
-  }));
+  let paths = [];
+  for (const data of fakeData) {
+    for (const s of data.status) {
+      let params ={params: { id: s.id, username: data.username }};
+      paths.push(params);
+    }
+  }
+ 
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  return { props: { params } };
+  return { props: { ...params } };
 }
 
 export default Id;

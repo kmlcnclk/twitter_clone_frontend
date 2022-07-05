@@ -9,14 +9,14 @@ const Tweet: FunctionComponent = () => {
   const router: NextRouter = useRouter();
 
   useEffect(() => {
-    router.prefetch(`${fakeData.username}/status/${fakeData.status[0].id}`);
+    router.prefetch(`${fakeData[0].username}/status/${fakeData[0].status[0].id}`);
   }, [router]);
 
   return (
     <div
       className="cursor-pointer hover:bg-[#f7f7f7] transition-colors p-4"
       onClick={() =>
-        router.push(`${fakeData.username}/status/${fakeData.status[0].id}`)
+        router.push(`${fakeData[0].username}/status/${fakeData[0].status[0].id}`)
       }
     >
       <div className="tweet-icon ml-1">
