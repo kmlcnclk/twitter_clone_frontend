@@ -23,7 +23,10 @@ const LeftSide: FunctionComponent = () => {
   useEffect(() => {
     router.prefetch(`/${user.username}`);
     router.prefetch(`/home`);
-  }, [router, user]);
+
+    if (router.pathname == '/home') dispatch(changeValue('home'));
+    if (router.pathname == '/[username]') dispatch(changeValue('profile'));
+  }, [router, user, dispatch]);
 
   return (
     <div
