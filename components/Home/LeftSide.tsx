@@ -22,6 +22,7 @@ const LeftSide: FunctionComponent = () => {
 
   useEffect(() => {
     router.prefetch(`/${user.username}`);
+    router.prefetch(`/home`);
   }, [router, user]);
 
   return (
@@ -40,7 +41,10 @@ const LeftSide: FunctionComponent = () => {
           <div className="w-[251px] h-full mt-1 transition-all">
             <div
               className="leftSide"
-              onClick={() => dispatch(changeValue('home'))}
+              onClick={() => {
+                dispatch(changeValue('home'));
+                router.push(`/home`);
+              }}
             >
               <div className="leftSideItem">
                 <div className="flex relative items-center">

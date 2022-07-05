@@ -16,10 +16,14 @@ const navList = [
 
 type RightSideProps = {
   relativePeopleState: boolean;
+  text: string;
+  bgColor: string;
 };
 
 const RightSide: FunctionComponent<RightSideProps> = ({
   relativePeopleState,
+  text,
+  bgColor,
 }: RightSideProps) => {
   return (
     <div className="px-8 h-min relative">
@@ -35,10 +39,10 @@ const RightSide: FunctionComponent<RightSideProps> = ({
       </div>
 
       {relativePeopleState ? (
-        <div className="bg-white rounded-2xl border-[1px] border-[#eff3f4] w-[350px] mt-20 h-auto ">
-          <p className="text-2xl font-bold text-[#0F1419] px-4 py-3">
-            Relevant People
-          </p>
+        <div
+          className={`bg-[${bgColor}] rounded-2xl border-[1px] border-[#eff3f4] w-[350px] mt-20 h-auto`}
+        >
+          <p className="text-xl font-bold text-[#0F1419] px-4 py-3">{text}</p>
           <div className="flex items-center justify-between transition-all hover:rounded-b-2xl hover:bg-[#EFF1F1] px-4 py-3 cursor-pointer">
             <div className="flex items-center">
               <NextImage
@@ -61,6 +65,11 @@ const RightSide: FunctionComponent<RightSideProps> = ({
               <p className="text-white text-sm">Follow</p>
             </div>
           </div>
+          {text == 'You might like' && (
+            <div className="w-full h-[52px] cursor-pointer hover:bg-[#EFF1F1] rounded-b-2xl transition-all ">
+              <p className="text-twitter text-sm p-4">Show more</p>
+            </div>
+          )}
         </div>
       ) : (
         <div className="mt-20"></div>

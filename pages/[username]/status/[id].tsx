@@ -27,7 +27,7 @@ const Id: NextPage<IdProps> = ({}: IdProps) => {
           <UsernameStatusIdComponent {...{ router, setTitle }} />
         </div>
         <div className="w-[382px]">
-          <RightSide relativePeopleState={true} />
+          <RightSide relativePeopleState={true} text="Relevant People" bgColor="#ffffff"/>
         </div>
       </div>
       <MessageBox />

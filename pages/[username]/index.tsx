@@ -33,7 +33,7 @@ const Index: NextPage<IndexProps> = ({}: IndexProps) => {
           <ProfileComponent {...{ router }} />
         </div>
         <div className="w-[382px]">
-          <RightSide relativePeopleState={true} />
+          <RightSide relativePeopleState={true} text="You might like" bgColor='#f7f9f9' />
         </div>
       </div>
       <MessageBox />
