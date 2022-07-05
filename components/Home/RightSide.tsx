@@ -15,13 +15,13 @@ const navList = [
 ];
 
 type RightSideProps = {
-  relativePeopleState: boolean;
-  text: string;
-  bgColor: string;
+  relativePeopleState?: boolean;
+  text?: string;
+  bgColor?: string;
 };
 
 const RightSide: FunctionComponent<RightSideProps> = ({
-  relativePeopleState,
+  relativePeopleState = false,
   text,
   bgColor,
 }: RightSideProps) => {
@@ -38,7 +38,7 @@ const RightSide: FunctionComponent<RightSideProps> = ({
         </div>
       </div>
 
-      {relativePeopleState ? (
+      {relativePeopleState && bgColor && text ? (
         <div
           className={`bg-[${bgColor}] rounded-2xl border-[1px] border-[#eff3f4] w-[350px] mt-20 h-auto`}
         >

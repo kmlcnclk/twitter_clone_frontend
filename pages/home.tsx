@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             <MidSide />
           </div>
           <div className="w-[382px] h-auto">
-            <RightSide relativePeopleState={false} />
+            <RightSide />
           </div>
         </div>
       </div>
