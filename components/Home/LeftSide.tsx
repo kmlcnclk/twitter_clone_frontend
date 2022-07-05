@@ -2,13 +2,20 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import Icon from 'src/Icon';
 import NextImage from 'next/image';
 import { selectUser } from 'store/sliders/userSlider';
-import { useAppSelector } from 'store/hooks';
-import { useRouter } from 'next/router';
+import {
+  selectLeftMenuSelected,
+  changeValue,
+} from 'store/sliders/leftMenuSelectedSlider';
+import { useAppSelector, useAppDispatch } from 'store/hooks';
+import { useRouter, NextRouter } from 'next/router';
 
 const LeftSide: FunctionComponent = () => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
+
+  const dispatch = useAppDispatch();
 
   const user = useAppSelector(selectUser);
+  const leftMenuSelected = useAppSelector(selectLeftMenuSelected);
 
   const [profilePopupState, setProfilePopupState] = useState<boolean>(false);
   const [moreState, setMoreState] = useState<boolean>(false);
@@ -31,64 +38,156 @@ const LeftSide: FunctionComponent = () => {
             <Icon name="twitterBird" width={50} height={30} color="#1D9BF0" />
           </div>
           <div className="w-[251px] h-full mt-1 transition-all">
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('home'))}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div>
-                  <Icon name="home" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-bold">Home</p>
+                  <Icon
+                    name={leftMenuSelected == 'home' ? 'homeFill' : 'home'}
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'home'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
+                    Home
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('explore'))}
+            >
               <div className="leftSideItem">
                 <div className="flex items-center">
-                  <Icon name="explore" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={
+                      leftMenuSelected == 'explore' ? 'exploreFill' : 'explore'
+                    }
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'explore'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Explore
                   </p>
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('notifications'))}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}
-                  <Icon name="notification" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={
+                      leftMenuSelected == 'notifications'
+                        ? 'notificationFill'
+                        : 'notification'
+                    }
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'notifications'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Notifications
                   </p>
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('messages'))}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}
-                  <Icon name="message" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={
+                      leftMenuSelected == 'messages' ? 'messageFill' : 'message'
+                    }
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'messages'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Messages
                   </p>
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('bookmarks'))}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}
-                  <Icon name="bookmark" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={
+                      leftMenuSelected == 'bookmarks'
+                        ? 'bookmarkFill'
+                        : 'bookmark'
+                    }
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'bookmarks'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Bookmarks
                   </p>
                 </div>
               </div>
             </div>
-            <div className="leftSide">
+            <div
+              className="leftSide"
+              onClick={() => dispatch(changeValue('lists'))}
+            >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}
-                  <Icon name="list" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={leftMenuSelected == 'lists' ? 'listFill' : 'list'}
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'lists'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Lists
                   </p>
                 </div>
@@ -96,13 +195,28 @@ const LeftSide: FunctionComponent = () => {
             </div>
             <div
               className="leftSide"
-              onClick={() => router.push(`/${user.username}`)}
+              onClick={() => {
+                dispatch(changeValue('profile'));
+                router.push(`/${user.username}`);
+              }}
             >
               <div className="leftSideItem">
                 <div className="flex relative items-center">
                   {/* <div className="w-[7px] h-[7px] bg-twitter rounded-full absolute left-[18px] -top-1"></div> */}
-                  <Icon name="profile" color="#0F1419" size="26.25px" />
-                  <p className=" ml-5 text-xl font-normal text-[#0f1419]">
+                  <Icon
+                    name={
+                      leftMenuSelected == 'profile' ? 'profileFill' : 'profile'
+                    }
+                    color="#0F1419"
+                    size="26.25px"
+                  />
+                  <p
+                    className={`ml-5 text-xl ${
+                      leftMenuSelected == 'profile'
+                        ? 'font-bold'
+                        : 'font-normal text-[#0f1419]'
+                    }`}
+                  >
                     Profile
                   </p>
                 </div>
