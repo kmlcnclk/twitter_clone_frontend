@@ -148,6 +148,7 @@ const RightSide: FunctionComponent<RightSideProps> = ({
                 src="/python.png"
                 width="48px"
                 height="48px"
+                objectFit="cover"
                 className="rounded-full"
               />
               <div className="-space-y-1 ml-2">

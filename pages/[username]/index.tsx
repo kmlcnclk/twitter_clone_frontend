@@ -6,7 +6,7 @@ import RightSide from 'components/Home/RightSide';
 import LeftSide from 'components/Home/LeftSide';
 import MessageBox from 'components/Messages/MessageBox';
 import { useRouter, NextRouter } from 'next/router';
-import ProfileComponent from 'components/ProfileComponent';
+import ProfileComponent from 'components/Profile/ProfileComponent';
 import { useAppSelector } from 'store/hooks';
 import { selectUser } from 'store/sliders/userSlider';
 
@@ -30,10 +30,14 @@ const Index: NextPage<IndexProps> = ({}: IndexProps) => {
           <LeftSide />
         </div>
         <div className="w-[600px] h-auto">
-          <ProfileComponent {...{ router }} />
+          <ProfileComponent {...{ router, user }} />
         </div>
         <div className="w-[382px]">
-          <RightSide relativePeopleState={true} text="You might like" bgColor='#f7f9f9' />
+          <RightSide
+            relativePeopleState={true}
+            text="You might like"
+            bgColor="#f7f9f9"
+          />
         </div>
       </div>
       <MessageBox />

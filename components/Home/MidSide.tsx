@@ -19,7 +19,8 @@ const MidSide: FunctionComponent = () => {
                 width="48px"
                 priority={true}
                 height="48px"
-                objectFit="contain"
+                objectFit="cover"
+                className="rounded-full"
               />
               <div className="ml-3 mt-[10px] flex">
                 <p className="text-[#5d6d79] text-xl">What&apos;s happening?</p>

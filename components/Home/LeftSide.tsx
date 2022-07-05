@@ -26,13 +26,15 @@ const LeftSide: FunctionComponent = () => {
 
     if (router.pathname == '/home') dispatch(changeValue('home'));
     else if (router.pathname == '/explore') dispatch(changeValue('explore'));
-    else if (router.pathname == '/notifications') dispatch(changeValue('notifications'));
+    else if (router.pathname == '/notifications')
+      dispatch(changeValue('notifications'));
     else if (router.pathname == '/messages') dispatch(changeValue('messages'));
-    else if (router.pathname == '/i/bookmarks') dispatch(changeValue('bookmarks'));
-    else if (router.pathname == '/[username]/lists') dispatch(changeValue('lists'));
+    else if (router.pathname == '/i/bookmarks')
+      dispatch(changeValue('bookmarks'));
+    else if (router.pathname == '/[username]/lists')
+      dispatch(changeValue('lists'));
     else if (router.pathname == '/[username]') dispatch(changeValue('profile'));
-    else dispatch(changeValue(""))
-
+    else dispatch(changeValue(''));
   }, [router, user, dispatch]);
 
   return (
@@ -352,7 +354,8 @@ const LeftSide: FunctionComponent = () => {
                       src="/python.png"
                       width="48px"
                       height="48px"
-                      objectFit="contain"
+                      objectFit="cover"
+                      className="rounded-full"
                     />
                     <div className="ml-2">
                       <p className="text-[#0F1419] font-semibold">
@@ -385,7 +388,8 @@ const LeftSide: FunctionComponent = () => {
                 width="40px"
                 priority={true}
                 height="40px"
-                objectFit="contain"
+                objectFit="cover"
+                className="rounded-full"
               />
               <div className="ml-2">
                 <p className="text-[#0F1419] font-semibold">Kamilcan Çelik</p>

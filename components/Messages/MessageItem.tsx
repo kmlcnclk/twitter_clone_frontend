@@ -11,6 +11,7 @@ const MessageItem: FunctionComponent = ({}) => {
         height="48px"
         alt="kmlcnclk"
         objectFit="cover"
+        className="rounded-full"
       />
       <div className="w-full">
         <div className="flex items-center justify-between w-full">

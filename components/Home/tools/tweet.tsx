@@ -9,14 +9,18 @@ const Tweet: FunctionComponent = () => {
   const router: NextRouter = useRouter();
 
   useEffect(() => {
-    router.prefetch(`${fakeData[0].username}/status/${fakeData[0].status[0].id}`);
+    router.prefetch(
+      `${fakeData[0].username}/status/${fakeData[0].status[0].id}`
+    );
   }, [router]);
 
   return (
     <div
       className="cursor-pointer hover:bg-[#f7f7f7] transition-colors p-4"
       onClick={() =>
-        router.push(`${fakeData[0].username}/status/${fakeData[0].status[0].id}`)
+        router.push(
+          `${fakeData[0].username}/status/${fakeData[0].status[0].id}`
+        )
       }
     >
       <div className="tweet-icon ml-1">
@@ -32,13 +36,15 @@ const Tweet: FunctionComponent = () => {
         </div>
       </div>
       <div className="mt-2 flex space-x-2 items-start">
-        <NextImage
-          src="/python.png"
-          width="48px"
-          height="48px"
-          className="rounded-full"
-          objectFit="cover"
-        />
+        <div className="w-[110px]">
+          <NextImage
+            src="/python.png"
+            width="48px"
+            height="48px"
+            objectFit="cover"
+            className="rounded-full"
+          />
+        </div>
         <div>
           <div className="flex justify-between items-center pr-3">
             <div className="flex space-x-1">

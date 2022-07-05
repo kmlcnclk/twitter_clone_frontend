@@ -5,7 +5,7 @@ interface StatusType {
   id: string;
 }
 
-interface UserType {
+export interface UserType {
   name: string;
   username: string;
   status: StatusType[];
@@ -17,9 +17,9 @@ interface InitialState {
 
 const initialState: InitialState = {
   value: {
-    name: '',
-    username: '',
-    status: [],
+    name: 'Kamilcan Çelik',
+    username: 'kmlcnclk',
+    status: [{ id: '1' }],
   },
 };
 
