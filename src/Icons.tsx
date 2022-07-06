@@ -1165,3 +1165,54 @@ export const LinkIcon = ({
     </svg>
   );
 };
+
+export const BirthDateIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      width={size}
+      height={size}
+      fill={color}
+      className={className}
+    >
+      <g>
+        <path d="M7.75 11.083c-.414 0-.75-.336-.75-.75C7 7.393 9.243 5 12 5c.414 0 .75.336.75.75s-.336.75-.75.75c-1.93 0-3.5 1.72-3.5 3.833 0 .414-.336.75-.75.75z"></path>
+        <path d="M20.75 10.333c0-5.01-3.925-9.083-8.75-9.083s-8.75 4.074-8.75 9.083c0 4.605 3.32 8.412 7.605 8.997l-1.7 1.83c-.137.145-.173.357-.093.54.08.182.26.3.46.3h4.957c.198 0 .378-.118.457-.3.08-.183.044-.395-.092-.54l-1.7-1.83c4.285-.585 7.605-4.392 7.605-8.997zM12 17.917c-3.998 0-7.25-3.402-7.25-7.584S8.002 2.75 12 2.75s7.25 3.4 7.25 7.583-3.252 7.584-7.25 7.584z"></path>
+      </g>
+    </svg>
+  );
+};
+
+export const JoinIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      width={size}
+      height={size}
+      fill={color}
+      className={className}
+    >
+      <g>
+        <path d="M19.708 2H4.292C3.028 2 2 3.028 2 4.292v15.416C2 20.972 3.028 22 4.292 22h15.416C20.972 22 22 20.972 22 19.708V4.292C22 3.028 20.972 2 19.708 2zm.792 17.708c0 .437-.355.792-.792.792H4.292c-.437 0-.792-.355-.792-.792V6.418c0-.437.354-.79.79-.792h15.42c.436 0 .79.355.79.79V19.71z"></path>
+        <circle cx="7.032" cy="8.75" r="1.285"></circle>
+        <circle cx="7.032" cy="13.156" r="1.285"></circle>
+        <circle cx="16.968" cy="8.75" r="1.285"></circle>
+        <circle cx="16.968" cy="13.156" r="1.285"></circle>
+        <circle cx="12" cy="8.75" r="1.285"></circle>
+        <circle cx="12" cy="13.156" r="1.285"></circle>
+        <circle cx="7.032" cy="17.486" r="1.285"></circle>
+        <circle cx="12" cy="17.486" r="1.285"></circle>
+      </g>
+    </svg>
+  );
+};

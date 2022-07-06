@@ -81,17 +81,29 @@ export default class Profile extends Component<Props, States> {
               <p className="text-md text-[#0f1419] ">{user.profileText}</p>
             </div>
             <div className="mt-4">
-              <div className="flex items-center">
+              <div className="flex items-center w-fit">
                 <Icon name="location" color="#536471" size="18.75px" />
                 <p className="text-[#536471] text-sm ml-1 mr-3">
                   {user.location}
                 </p>
+
                 <Icon name="link" color="#536471" size="18.75px" />
                 <NextLink href={`${user.profileWebsiteLink}`}>
-                  <a className="text-[#1d9bf0] text-sm ml-1 mr-3 hover:underline cursor-pointer " target="_blank">
+                  <a
+                    className="text-[#1d9bf0] text-sm ml-1 mr-3 hover:underline cursor-pointer "
+                    target="_blank"
+                  >
                     {profileUrl}
                   </a>
                 </NextLink>
+                <Icon name="birthDate" color="#536471" size="18.75px" />
+                <p className="text-[#536471] text-sm ml-1 mr-3">
+                  Born {user.birthDate}
+                </p>
+                <Icon name="join" color="#536471" size="18.75px" />
+                <p className="text-[#536471] text-sm ml-1 mr-3">
+                  Joined {user.joinDate} asdasdasdasdasdasdasdasdsadas
+                </p>
               </div>
             </div>
           </div>

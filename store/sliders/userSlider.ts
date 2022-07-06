@@ -12,6 +12,8 @@ export interface UserType {
   profileText: string;
   location: string;
   profileWebsiteLink: string;
+  birthDate: string;
+  joinDate: string;
 }
 
 interface InitialState {
@@ -26,6 +28,8 @@ const initialState: InitialState = {
     profileText: 'Frontend developer & Backend for Frontend developer',
     location: 'Turkey',
     profileWebsiteLink: 'https://github.com/kmlcnclk',
+    birthDate: 'May 2, 2001',
+    joinDate: 'December 2021',
   },
 };
 

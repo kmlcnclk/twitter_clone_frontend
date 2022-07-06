@@ -20,6 +20,8 @@ const Home: NextPage = () => {
         profileText: 'Frontend developer & Backend for Frontend developer',
         location: 'Turkey',
         profileWebsiteLink: 'https://github.com/kmlcnclk',
+        birthDate: 'May 2, 2001',
+        joinDate: 'December 2021',
       })
     );
   }, [dispatch]);

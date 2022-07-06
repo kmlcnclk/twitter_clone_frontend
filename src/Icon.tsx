@@ -53,6 +53,8 @@ import {
   ExpandIcon,
   CollapseIcon,
   LinkIcon,
+  BirthDateIcon,
+  JoinIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -128,6 +130,8 @@ const Icon: FunctionComponent<IconTypes> = ({
     expand: ExpandIcon,
     collapse: CollapseIcon,
     link: LinkIcon,
+    birthDate: BirthDateIcon,
+    join: JoinIcon,
   };
 
   const Component = icons[name];
