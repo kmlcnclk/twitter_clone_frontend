@@ -3,17 +3,36 @@ import Icon from 'src/Icon';
 import { NextRouter } from 'next/router';
 import { UserType } from 'store/sliders/userSlider';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 
 interface Props {
   router: NextRouter;
   user: UserType;
 }
 
-interface States {}
+interface States {
+  profileUrl: string;
+}
 
 export default class Profile extends Component<Props, States> {
+  state = {
+    profileUrl: '',
+  };
+
+  componentDidMount(): void {
+    const {
+      user: { profileWebsiteLink },
+    } = this.props;
+
+    this.setState({
+      profileUrl: profileWebsiteLink.split('https://')[1],
+    });
+  }
+
   render() {
     const { user, router } = this.props;
+    const { profileUrl } = this.state;
+
     return (
       <div>
         <div className="flex justify-start items-center h-[53px] px-4 border-x-[1px] border-[#eff3f4] ">
@@ -48,9 +67,35 @@ export default class Profile extends Component<Props, States> {
               priority={true}
             />
           </div>
-          <div className="absolute right-4 top-2 font-semibold bg-white border-[1px] cursor-pointer px-4 py-1 hover:bg-[#e7e7e8] transition-all rounded-full border-[#cfd9de]" >Edit profile</div>
+          <div className="absolute right-4 top-2 font-semibold bg-white border-[1px] cursor-pointer px-4 py-1 hover:bg-[#e7e7e8] transition-all rounded-full border-[#cfd9de]">
+            Edit profile
+          </div>
         </div>
-
+        <div className="pt-20  border-x-[1px] border-[#eff3f4] px-4">
+          <div>
+            <div>
+              <h5 className="text-lg font-bold text-[#0f1419] ">{user.name}</h5>
+              <p className="text-sm text-[#536471]">@{user.username}</p>
+            </div>
+            <div className="mt-4">
+              <p className="text-md text-[#0f1419] ">{user.profileText}</p>
+            </div>
+            <div className="mt-4">
+              <div className="flex items-center">
+                <Icon name="location" color="#536471" size="18.75px" />
+                <p className="text-[#536471] text-sm ml-1 mr-3">
+                  {user.location}
+                </p>
+                <Icon name="link" color="#536471" size="18.75px" />
+                <NextLink href={`${user.profileWebsiteLink}`}>
+                  <a className="text-[#1d9bf0] text-sm ml-1 mr-3 hover:underline cursor-pointer " target="_blank">
+                    {profileUrl}
+                  </a>
+                </NextLink>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

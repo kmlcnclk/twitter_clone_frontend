@@ -17,6 +17,9 @@ const Home: NextPage = () => {
         name: 'Kamilcan Çelik',
         username: 'kmlcnclk',
         status: [{ id: '1' }],
+        profileText: 'Frontend developer & Backend for Frontend developer',
+        location: 'Turkey',
+        profileWebsiteLink: 'https://github.com/kmlcnclk',
       })
     );
   }, [dispatch]);

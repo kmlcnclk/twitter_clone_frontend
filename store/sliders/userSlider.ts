@@ -9,6 +9,9 @@ export interface UserType {
   name: string;
   username: string;
   status: StatusType[];
+  profileText: string;
+  location: string;
+  profileWebsiteLink: string;
 }
 
 interface InitialState {
@@ -20,6 +23,9 @@ const initialState: InitialState = {
     name: 'Kamilcan Çelik',
     username: 'kmlcnclk',
     status: [{ id: '1' }],
+    profileText: 'Frontend developer & Backend for Frontend developer',
+    location: 'Turkey',
+    profileWebsiteLink: 'https://github.com/kmlcnclk',
   },
 };
 

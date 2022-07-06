@@ -52,6 +52,7 @@ import {
   NewMessageIcon,
   ExpandIcon,
   CollapseIcon,
+  LinkIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -75,7 +76,7 @@ const Icon: FunctionComponent<IconTypes> = ({
 }: IconTypes) => {
   const icons = {
     twitterBird: TwitterBirdIcon,
-    home:HomeIcon,
+    home: HomeIcon,
     homeFill: HomeFillIcon,
     explore: ExploreIcon,
     exploreFill: ExploreFillIcon,
@@ -126,6 +127,7 @@ const Icon: FunctionComponent<IconTypes> = ({
     newMessage: NewMessageIcon,
     expand: ExpandIcon,
     collapse: CollapseIcon,
+    link: LinkIcon,
   };
 
   const Component = icons[name];

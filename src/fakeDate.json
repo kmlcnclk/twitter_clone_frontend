@@ -2,11 +2,13 @@
   {
     "name": "Kamilcan Çelik",
     "username": "kmlcnclk",
-    "status": [{ "id": "1" }]
+    "status": [{ "id": "1" }],
+    "profileText": "Frontend developer & Backend for Frontend developer"
   },
   {
     "name": "Demir Çelik",
     "username": "dmr",
-    "status": [{ "id": "2" }]
+    "status": [{ "id": "2" }],
+    "profileText": "Frontend developer & Backend for Frontend developer"
   }
 ]
