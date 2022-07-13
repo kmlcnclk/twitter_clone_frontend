@@ -22,6 +22,8 @@ const Home: NextPage = () => {
         profileWebsiteLink: 'https://github.com/kmlcnclk',
         birthDate: 'May 2, 2001',
         joinDate: 'December 2021',
+        followers: 17,
+        following: 228,
       })
     );
   }, [dispatch]);

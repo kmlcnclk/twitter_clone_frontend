@@ -14,6 +14,8 @@ export interface UserType {
   profileWebsiteLink: string;
   birthDate: string;
   joinDate: string;
+  followers: number;
+  following: number;
 }
 
 interface InitialState {
@@ -30,6 +32,8 @@ const initialState: InitialState = {
     profileWebsiteLink: 'https://github.com/kmlcnclk',
     birthDate: 'May 2, 2001',
     joinDate: 'December 2021',
+    followers: 17,
+    following: 228,
   },
 };
 

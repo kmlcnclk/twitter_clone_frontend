@@ -82,4 +82,22 @@
   .messageItem:hover .messageMoreIcon {
     @apply block;
   }
+
+  .profileBarBlueAnimation {
+    position: absolute;
+    background-color: #1d9bf0;
+    bottom: 0px;
+    width: 0%;
+    height: 4px;
+    animation: profile-bar-blue-animation 1s forwards 1 ease-in-out;
+  }
+
+  @keyframes profile-bar-blue-animation {
+    100% {
+      width: 100%;
+    }
+    0% {
+      width: 0%;
+    }
+  }
 }
