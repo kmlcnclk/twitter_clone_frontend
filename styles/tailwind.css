@@ -100,4 +100,16 @@
       width: 0%;
     }
   }
+  .scroll-container-2 {
+    @apply flex mt-3 scroll-smooth flex-wrap flex-col h-[248px] gap-2; 
+  }
+  .navigate-2 {
+    @apply absolute z-10 top-[115.7px] bg-[#0f1419bf] hover:bg-[#272c30bf] transition-all h-9 w-9 drop-shadow-lg -translate-y-1/2 text-black rounded-full;
+  }
+  .next-navigate-2 {
+    @apply right-0;
+  }
+  .prev-navigate-2 {
+    @apply left-0;
+  }
 }

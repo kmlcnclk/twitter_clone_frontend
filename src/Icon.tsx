@@ -55,6 +55,9 @@ import {
   LinkIcon,
   BirthDateIcon,
   JoinIcon,
+  PlusIcon,
+  CrossIcon,
+  RightArrowIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -132,6 +135,9 @@ const Icon: FunctionComponent<IconTypes> = ({
     link: LinkIcon,
     birthDate: BirthDateIcon,
     join: JoinIcon,
+    plus: PlusIcon,
+    cross: CrossIcon,
+    rightArrow: RightArrowIcon,
   };
 
   const Component = icons[name];

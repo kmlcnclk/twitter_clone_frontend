@@ -4,7 +4,7 @@ import { NextRouter } from 'next/router';
 import { UserType } from 'store/sliders/userSlider';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import TweetsComponent from './TweetsComponent';
+import TweetsComponent from './Tweets/TweetsComponent';
 import { Spinner } from '@chakra-ui/react';
 
 interface Props {

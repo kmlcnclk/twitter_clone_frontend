@@ -1216,3 +1216,66 @@ export const JoinIcon = ({
     </svg>
   );
 };
+
+export const PlusIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      width={size}
+      height={size}
+      fill={color}
+      className={className}
+    >
+      <g>
+        <path d="M19.75 11H13V4.25c0-.553-.447-1-1-1s-1 .447-1 1V11H4.25c-.553 0-1 .447-1 1s.447 1 1 1H11v6.75c0 .553.447 1 1 1s1-.447 1-1V13h6.75c.553 0 1-.447 1-1s-.447-1-1-1z"></path>
+      </g>
+    </svg>
+  );
+};
+
+export const CrossIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      width={size}
+      height={size}
+      fill={color}
+      className={className}
+    >
+      <g>
+        <path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path>
+      </g>
+    </svg>
+  );
+};
+
+export const RightArrowIcon = ({
+  size,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      width={size}
+      height={size}
+      fill={color}
+      className={className}
+    >
+      <g>
+        <path d="M19.707 11.293l-6-6c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L16.586 11H4c-.553 0-1 .447-1 1s.447 1 1 1h12.586l-4.293 4.293c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293l6-6c.39-.39.39-1.023 0-1.414z"></path>
+      </g>
+    </svg>
+  );
+};
