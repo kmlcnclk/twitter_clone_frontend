@@ -23,8 +23,8 @@ class UsernameStatusIdComponent extends Component<Props, States> {
 
     return (
       <div className="w-full h-full border-x-[1px] border-[#eff3f4]">
-        <div className="p-3 border-b-[1px] border-[#eff3f4]">
-          <div className="flex items-center">
+        <div className="p-3 pt-0 border-b-[1px] border-[#eff3f4]">
+          <div className="flex items-center sticky top-0 bg-white h-[53px] opacity-95 z-50">
             <div
               className="hover:bg-[#e7e7e8] w-[25px] h-[25px] cursor-pointer rounded-full flex items-center justify-center transition-all "
               onClick={() => router.back()}
@@ -33,7 +33,7 @@ class UsernameStatusIdComponent extends Component<Props, States> {
             </div>
             <h3 className="text-xl font-bold ml-8">Tweet</h3>
           </div>
-          <div className="mt-6 ">
+          <div className="">
             <div className="flex items-center space-x-3">
               <Icon name="fillLike" color="#536471" size="16px" />
               <p className="text-[#536471] font-semibold text-sm">

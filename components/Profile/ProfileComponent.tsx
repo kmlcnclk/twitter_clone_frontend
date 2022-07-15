@@ -39,7 +39,7 @@ export default class Profile extends Component<Props, States> {
 
     return (
       <div>
-        <div className="flex justify-start items-center h-[53px] px-4 border-x-[1px] border-[#eff3f4] ">
+        <div className="flex justify-start items-center h-[53px] px-4 border-x-[1px] border-[#eff3f4] opacity-95 sticky top-0 bg-white z-50">
           <div
             onClick={() => router.back()}
             className="hover:bg-[#e7e7e8] w-8 h-8 flex justify-center items-center cursor-pointer rounded-full transition-all"

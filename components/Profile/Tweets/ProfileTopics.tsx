@@ -57,7 +57,7 @@ function ProfileTopics() {
   };
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 border-[#eff3f4] border-b-[1px] pb-1">
       <div className="px-4">
         <h3 className="text-[#0f1419] text-xl font-bold">Topics to follow</h3>
         <p className="text-[#536471] text-sm">
@@ -65,7 +65,7 @@ function ProfileTopics() {
         </p>
       </div>
       <div
-        className="mt-5 p-1"
+        className="mt-2 p-1"
         onMouseEnter={() => setArrowsVisibility(true)}
         onMouseLeave={() => setArrowsVisibility(false)}
       >
@@ -96,12 +96,15 @@ function ProfileTopics() {
             vertical={false}
           >
             {a.map((a, i) => (
-              <div key={i} className="min-w-max" >
+              <div key={i} className="min-w-max">
                 <ProfileTopicsItem a={a} />
               </div>
             ))}
           </ScrollContainer>
         </div>
+      </div>
+      <div className="w-full h-[52px] cursor-pointer hover:bg-[#EFF1F1] transition-all ">
+        <p className="text-twitter text-sm p-4">More topics</p>
       </div>
     </div>
   );

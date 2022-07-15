@@ -16,7 +16,7 @@ const Tweet: FunctionComponent = () => {
 
   return (
     <div
-      className="cursor-pointer hover:bg-[#f7f7f7] transition-colors p-4"
+      className="cursor-pointer hover:bg-[#f7f7f7] border-[#eff3f4] border-b-[1px] transition-colors p-4"
       onClick={() =>
         router.push(
           `${fakeData[0].username}/status/${fakeData[0].status[0].id}`
