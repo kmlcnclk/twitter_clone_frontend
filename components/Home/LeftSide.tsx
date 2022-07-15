@@ -7,7 +7,7 @@ import {
   changeValue,
 } from 'store/sliders/leftMenuSelectedSlider';
 import { useAppSelector, useAppDispatch } from 'store/hooks';
-import { useRouter, NextRouter } from 'next/router';
+import { useRouter, NextRouter, Router } from 'next/router';
 
 const LeftSide: FunctionComponent = () => {
   const router: NextRouter = useRouter();
@@ -48,7 +48,13 @@ const LeftSide: FunctionComponent = () => {
       <div className="flex min-h-screen flex-col justify-between">
         <div>
           <div className="w-[50px] h-[50px] hover:bg-[#E8F5FD] flex justify-center items-center rounded-full transition-all cursor-pointer">
-            <Icon name="twitterBird" width={50} height={30} color="#1D9BF0" />
+            <Icon
+              name="twitterBird"
+              width={50}
+              height={30}
+              color="#1D9BF0"
+              onClickFunc={() => router.push('/home')}
+            />
           </div>
           <div className="w-[251px] h-full mt-1 transition-all">
             <div

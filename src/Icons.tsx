@@ -1,17 +1,25 @@
 import { SVGProps } from 'react';
 
+interface OnClickType {
+  onClickFunc: Function;
+}
+
+type IconTypeWithOnClick = SVGProps<SVGSVGElement> & OnClickType;
+
 export const TwitterBirdIcon = ({
   width,
   height,
   color,
   className,
-}: SVGProps<SVGSVGElement>) => {
+  onClickFunc,
+}: IconTypeWithOnClick) => {
   return (
     <svg
       width={width}
       height={height}
       fill={color}
       className={className}
+      onClick={() => onClickFunc()}
       viewBox="0 0 24 24"
       aria-hidden="true"
     >
