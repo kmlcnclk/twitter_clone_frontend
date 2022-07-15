@@ -23,7 +23,7 @@ let a = [
 ];
 
 function ProfileTopics() {
-  const topicsRef = useRef<HTMLDivElement>();
+  const topicsRef = useRef<HTMLDivElement>(null);
 
   const [prev, setPrev] = useState(false);
   const [next, setNext] = useState(false);
@@ -31,22 +31,21 @@ function ProfileTopics() {
 
   useEffect(() => {
     if (topicsRef?.current) {
+      const refCurrent = topicsRef?.current;
       const scrollHandle1 = () => {
         const isEnd =
-          topicsRef?.current.scrollLeft + topicsRef?.current.offsetWidth ==
-          topicsRef?.current.scrollWidth;
-        const isBegin = topicsRef?.current.scrollLeft == 0;
+          refCurrent.scrollLeft + refCurrent.offsetWidth ==
+          refCurrent.scrollWidth;
+        const isBegin = refCurrent.scrollLeft == 0;
         setPrev(!isBegin);
         setNext(!isEnd);
       };
       scrollHandle1();
-      topicsRef?.current?.addEventListener('scroll', scrollHandle1);
+      refCurrent.addEventListener('scroll', scrollHandle1);
 
-      if (topicsRef.current) {
-        return () => {
-          topicsRef?.current?.removeEventListener('scroll', scrollHandle1);
-        };
-      }
+      return () => {
+        refCurrent.removeEventListener('scroll', scrollHandle1);
+      };
     }
   }, []);
 
@@ -97,7 +96,7 @@ function ProfileTopics() {
             vertical={false}
           >
             {a.map((a, i) => (
-              <div key={i}>
+              <div key={i} className="min-w-max" >
                 <ProfileTopicsItem a={a} />
               </div>
             ))}

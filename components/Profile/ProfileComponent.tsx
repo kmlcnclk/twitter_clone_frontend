@@ -36,7 +36,7 @@ export default class Profile extends Component<Props, States> {
   render() {
     const { user, router } = this.props;
     const { profileUrl, profileBar } = this.state;
-    console.log(profileBar);
+
     return (
       <div>
         <div className="flex justify-start items-center h-[53px] px-4 border-x-[1px] border-[#eff3f4] ">
